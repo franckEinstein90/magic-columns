@@ -1,0 +1,41 @@
+{
+    "key": "magic-columns",
+    "name": "Magic Columns",
+    "description": "magic-columns helps you link table data across confluence",
+    "vendor": {
+        "name": "Neuron-Fac",
+        "url": "https://www.atlassian.com/neuron-fac"
+    },
+    "baseUrl": "{{localBaseUrl}}",
+    "links": {
+        "self": "{{localBaseUrl}}/atlassian-connect.json",
+        "homepage": "{{localBaseUrl}}/atlassian-connect.json"
+    },
+    "authentication": {
+        "type": "jwt"
+    },
+    "lifecycle": {
+        "installed": "/installed"
+    },
+    "scopes": [
+        "READ"
+    ],
+    "modules": {
+        "generalPages": [
+           {
+                "key": "magic-columns-configuration-page",
+                "location": "system.header/left",
+                "name": {
+                    "value": "magic-columns"
+                },
+                "url": "/magic-world",
+                "conditions": [{
+                    "condition": "user_is_logged_in"
+                }]
+            }
+        ]
+    },
+    "apiMigrations": {
+        "gdpr": true
+    }
+}

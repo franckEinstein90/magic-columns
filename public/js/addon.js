@@ -1,0 +1,5 @@
+AJS.toInit(function($){
+
+
+
+});
